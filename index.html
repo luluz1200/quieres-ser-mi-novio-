@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novio?</title>
+    <style> 
+    
+        .body {
+            background-color:black;
+        font-family: inherit;
+            text-align: center;
+            background-image: url('/web.jpg');
+        }
+
+        .body__title {
+            color:rgb(238, 223, 12);
+            
+        }
+
+        .body__img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <h1 class="body__title">¿Quieres ser mi novio?</h1>
+    <img src="https://www.otakulegion.com/wp-content/uploads/2020/12/fullmetal-alchemist-winry-rockbell-1024x576.jpg"
+        alt="No traduzcas : 不従順？キスして" class="body__img">
+    <button id="yes"> Sí </button>
+    <button id="no"> No </button>
+
+    <script>
+        const vutonSi = document.getElementById('yes')
+        const vutonNo = document.getElementById('no')
+
+        const mensajeSi = () => {
+            alert('¿Seguro?');
+            alert('ahora somos novios hasta la 4ta Guerra Mundial')
+            location.href = 'https://www.youtube.com/watch?v=DXV79KHSftc';
+        };
+
+        const accionNo = () => {
+            vutonNo.style.position = 'absolute';
+            vutonNo.style.top = (Math.random() * window.innerHeight) + 'px';
+            vutonNo.style.left = (Math.random() * window.innerWidth) + 'px';
+        };
+
+        vutonSi.addEventListener('click', mensajeSi);
+        vutonNo.addEventListener('mouseover', accionNo);
+    </script>
+</body>
+
+</html>
